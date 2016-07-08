@@ -1,5 +1,5 @@
 # quickMVC
-
+will use protobuf to serialize
 Used to quickly build for springmvc project, integrating mybaitis spring and for springmvc
 
 ------
