@@ -19,4 +19,4 @@ Used to quickly build for springmvc project, integrating mybaitis spring and for
 复劳动，提高生产力，实现快速、平稳的开发
 > * 实现Mybatis的分页查询模块，支持MySQL、PostgreSQL、SQLServer等数据库分页查询
 > * 通用的权限管理模块，基于Apache Shiro的 用户-角色-权限(RBAC)的细粒度权限控制
-> * 快速实现序列化
+> * 快速高效实现序列化
