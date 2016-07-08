@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - quick4j@localhost" uuid="af997bd5-b019-4353-b969-53570a7267c4">
+    <database-info product="MySQL" version="5.7.12" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="seckill"/>
+      <table id="2" parent="1" name="seckill">
+        <comment>秒杀库存表</comment>
+      </table>
+      <table id="3" parent="1" name="success_killed">
+        <comment>秒杀成功明细表</comment>
+      </table>
+      <column id="4" parent="2" name="seckill_id">
+        <comment>商品库存ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="5" parent="2" name="name">
+        <comment>商品名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(120)</data-type>
+      </column>
+      <column id="6" parent="2" name="number">
+        <comment>库存数量</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="7" parent="2" name="start_time">
+        <comment>秒杀开始时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="8" parent="2" name="end_time">
+        <comment>秒杀结束时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="9" parent="2" name="create_time">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <index id="10" parent="2" name="idx_create_time">
+        <columns>create_time</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="11" parent="2" name="idx_end_time">
+        <columns>end_time</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="12" parent="2" name="idx_start_time">
+        <columns>start_time</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="13" parent="2" name="PRIMARY">
+        <columns>seckill_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="14" parent="3" name="seckill_id">
+        <comment>秒杀商品ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="15" parent="3" name="user_phone">
+        <comment>用户手机号</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="16" parent="3" name="state">
+        <comment>状态标识:-1:无效 0:成功 1:已付款 2:已发货</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+        <default-expression>&apos;-1&apos;</default-expression>
+      </column>
+      <column id="17" parent="3" name="create_time">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <index id="18" parent="3" name="idx_create_time">
+        <columns>create_time</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="19" parent="3" name="PRIMARY">
+        <columns>seckill_id
+user_phone</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - quick4j@localhost [2]" uuid="24cc71ae-9b68-48e2-b904-6209830c1b72">
+    <database-info product="MySQL" version="5.7.12" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="quick4j"/>
+      <table id="2" parent="1" name="permission">
+        <comment>权限表</comment>
+      </table>
+      <table id="3" parent="1" name="role">
+        <comment>角色表</comment>
+      </table>
+      <table id="4" parent="1" name="role_permission">
+        <comment>角色与权限关联表</comment>
+      </table>
+      <table id="5" parent="1" name="user">
+        <comment>用户表</comment>
+      </table>
+      <table id="6" parent="1" name="user_role">
+        <comment>用户与角色关联表</comment>
+      </table>
+      <column id="7" parent="2" name="id">
+        <comment>权限id</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20) unsigned</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="8" parent="2" name="permission_name">
+        <comment>权限名</comment>
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="9" parent="2" name="permission_sign">
+        <comment>权限标识,程序中判断使用,如&quot;user:create&quot;</comment>
+        <data-type>varchar(128)</data-type>
+      </column>
+      <column id="10" parent="2" name="description">
+        <comment>权限描述,UI界面显示使用</comment>
+        <data-type>varchar(256)</data-type>
+      </column>
+      <key id="11" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="12" parent="3" name="id">
+        <comment>角色id</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20) unsigned</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="13" parent="3" name="role_name">
+        <comment>角色名</comment>
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="14" parent="3" name="role_sign">
+        <comment>角色标识,程序中判断使用,如&quot;admin&quot;</comment>
+        <data-type>varchar(128)</data-type>
+      </column>
+      <column id="15" parent="3" name="description">
+        <comment>角色描述,UI界面显示使用</comment>
+        <data-type>varchar(256)</data-type>
+      </column>
+      <key id="16" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="17" parent="4" name="id">
+        <comment>表id</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20) unsigned</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="18" parent="4" name="role_id">
+        <comment>角色id</comment>
+        <data-type>bigint(20) unsigned</data-type>
+      </column>
+      <column id="19" parent="4" name="permission_id">
+        <comment>权限id</comment>
+        <data-type>bigint(20) unsigned</data-type>
+      </column>
+      <key id="20" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="21" parent="5" name="id">
+        <comment>用户id</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20) unsigned</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="22" parent="5" name="username">
+        <comment>用户名</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="23" parent="5" name="password">
+        <comment>密码</comment>
+        <data-type>char(64)</data-type>
+      </column>
+      <column id="24" parent="5" name="state">
+        <comment>状态</comment>
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="25" parent="5" name="create_time">
+        <comment>创建时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="26" parent="5" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="27" parent="6" name="id">
+        <comment>表id</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20) unsigned</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="28" parent="6" name="user_id">
+        <comment>用户id</comment>
+        <data-type>bigint(20) unsigned</data-type>
+      </column>
+      <column id="29" parent="6" name="role_id">
+        <comment>角色id</comment>
+        <data-type>bigint(20) unsigned</data-type>
+      </column>
+      <key id="30" parent="6" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

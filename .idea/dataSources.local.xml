@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - quick4j@localhost" uuid="af997bd5-b019-4353-b969-53570a7267c4">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>seckill.*</schema-pattern>
+      <default-schemas>seckill.*</default-schemas>
+    </data-source>
+    <data-source name="MySQL - quick4j@localhost [2]" uuid="24cc71ae-9b68-48e2-b904-6209830c1b72">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>quick4j.*</schema-pattern>
+      <default-schemas>quick4j.*</default-schemas>
+    </data-source>
+  </component>
+</project>

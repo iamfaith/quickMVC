@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="quick4j:war">
+    <output-path>$USER_HOME$/Downloads/quick4j-master/target</output-path>
+    <root id="archive" name="quick4j.war">
+      <element id="artifact" artifact-name="quick4j:war exploded" />
+    </root>
+  </artifact>
+</component>

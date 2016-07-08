@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/Downloads/quick4j-master/quick4j.iml" filepath="$USER_HOME$/Downloads/quick4j-master/quick4j.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quickMVC.iml" filepath="$PROJECT_DIR$/quickMVC.iml" />
+    </modules>
+  </component>
+</project>
