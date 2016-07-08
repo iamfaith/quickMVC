@@ -1,5 +1,5 @@
 # quickMVC
-will use protostuff to serialize  用protostuff序列化 
+will use protostuff to serialize  用protostuff进行序列化 
 
 Used to quickly build for springmvc project, integrating mybaitis spring and for springmvc
 
